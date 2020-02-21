@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>DOJO Survey</title>
+</head>
+<body>
+    <div class="container">
+        <form action='/result' method ='POST'>
+            <div class="row flex-center borderline">
+                <div class="col">
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Your Name:</label>
+                        </div>
+                        <div class="col-2">
+                            <input type='text' name='name'>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Dojo Location:</label>
+                        </div>
+                        <div>
+                            <ul>
+                                <input type="radio" id="locationlist" name="locationlist" value="San Jose, Ca" checked>
+                                <label for="San Jose, Ca">San Jose, Ca</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Seattle, WA">
+                                <label for="Seattle, WA">Seattle, WA</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Los Angeles, CA">
+                                <label for="Los Angeles, CA">Los Angeles, CA</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Dallas, Texas">
+                                <label for="Dallas, Texas">Dallas, Texas</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Arlingtion, VA">
+                                <label for="Arlingtion, VA">Arlingtion, VA</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Chicago, IL">
+                                <label for="Chicago, IL">Chicago, IL</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Tulsa, OK">
+                                <label for="Tulsa, OK">Tulsa, OK</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Oakland, CA">
+                                <label for="Oakland, CA">Oakland, CA</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Boise, ID">
+                                <label for="Boise, ID">Boise, ID</label>
+                                <input type="radio" id="locationlist" name="locationlist" value="Other">
+                                <label for="Other">Other</label>
+                            </ul>
+                            <!-- <select id="locationlist" name="locationlist">
+                                <option>San Jose, CA</option>
+                                <option>Seattle, WA</option>
+                                <option>Los Angeles, CA</option>
+                                <option>Online</option>
+                                <option>Dallas, TX</option>
+                                <option>Arlington, VA</option>
+                                <option>Chicago, IL</option>
+                                <option>Tulsa, OK</option>
+                                <option>Oakland, CA</option>
+                                <option>Boise, ID</option>
+                                <option>Orange County, CA</option>
+                            </select> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <label>Favorite Language:</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="languagelist" name="languagelist" value="JavaScript">
+                            <label for="JavaScript">JavaScript</label>
+                            <input type="checkbox" id="languagelist" name="languagelist" value="Python">
+                            <label for="Python">Python</label>
+                            <input type="checkbox" id="languagelist" name="languagelist" value="C#">
+                            <label for="C#">C#</label>
+                            <input type="checkbox" id="languagelist" name="languagelist" value="Ruby">
+                            <label for="Ruby">Ruby</label>
+                            <!-- <select id="languagelist" name="languagelist">
+                                <option>Javascript</option>
+                                <option>Python</option>
+                                <option>MEAN</option>
+                                <option>C#</option>
+                                <option>Ruby</option>
+                            </select> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>Comment (optional):</label>
+                    </div>
+                    <div class="row">
+                        <textarea rows="4" cols="50" type="text" name="comment"></textarea>
+                    </div>
+                    <div class="row">
+                        <input class="btn btn-info" type='submit' value='Create User'>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
